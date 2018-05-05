@@ -1,0 +1,4 @@
+Tested on Ubuntu 16.04 and requires Linux.  To run, make file executable, place file in folder with .obj or .exe files. Run file from command line.
+
+Example - $ sudo chmod +x ObjtoBinary
+	  $ ./ObjtoBinary

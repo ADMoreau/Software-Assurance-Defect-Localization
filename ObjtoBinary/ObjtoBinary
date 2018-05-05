@@ -1,0 +1,8 @@
+#Loop to search for all .obj files in directory
+for f in CWE*.obj; do
+    # xxd to create bit dump of obj file, pipe to cut to remove line numbers, pipe to sed to remove ascii column at end, ouput to .bin file
+    xxd -b "$f" | cut -d: -f 2 | sed 's/  .*//; s/ //g' > "${f%.*}_output.bin";
+done
+
+xxd -b *.exe | cut -d: -f 2 | sed 's/  .*//; s/ //g' > CWE_EXE.bin
+
