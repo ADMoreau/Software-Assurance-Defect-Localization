@@ -1,0 +1,6 @@
+Tested on Ubuntu 16.04 and requires python.  To run, place file in folder with .bin files, make file executable or run from command line with python3.
+
+Example - $ sudo chmod +x BinarytoDNA
+	  $ ./BinarytoDNA
+
+Example - $ python3 BinarytoDNA.py
