@@ -5,8 +5,7 @@ Implementation Details:
 Python 2.7.12
 Linux based script
 
-In order to run use the chmod +x or use the python program to run. Must feed a list of links that lead to other links in order to
-scrape properly.
+In order to run use the chmod +x or use the python program to run. Must feed a list of links that lead to other links in order to scrape properly.
 
 See http://genome.lbl.gov/vista/mvista/about.shtml to learn more about the mVista suite that provided links for scraping.
   
