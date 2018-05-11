@@ -1,0 +1,4 @@
+This file contains the 20 juliet test cases used in the final test on which we used the machine learning methods 
+contained within ML.py to classify them as either good or bad. 
+The two csv files contain the actual list of features that the two python files testvalues and train values were used to compare
+the test cases to in order to extract the float values/ levels of similarity that would be used in the machine learning program.
