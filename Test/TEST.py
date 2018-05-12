@@ -1,10 +1,16 @@
 import csv
 from difflib import SequenceMatcher
-
+'''
+This code is the initial method used to extract float representation of the highest level of similarity the processed features had to a new
+set of functions that would create the data to be used for testing.
+The names of the files are listed below as the textfiles that would be opened.
+This file would eventually be split into two other programs that do the same thing but focus on different files so as to improve processing 
+time
+'''
 trainInit = []
 testInit = []
 
-############LISTS OS IMPORTEED FEATURES#############################
+############LISTS OF IMPORTED FEATURES#############################
 temp1 = open('90filteredOMITGOOD.csv','r')
 data1 = csv.reader((line.replace('\0','') for line in temp1), delimiter = '\n')    
 OMITGOODFEATS = list(data1)
@@ -94,6 +100,15 @@ testInit.append(OMITGOOD_TEST4[0])
 OMITGOOD_TEST5 = open('OMITGOOD_TEST_421.txt')
 OMITGOOD_TEST5 = OMITGOOD_TEST5.readlines()[1:]
 testInit.append(OMITGOOD_TEST5[0])
+
+'''
+The four similar for loops listed below uses a window of the length of one of the features from the final set of features, this window looks at
+every sequential string of similar length in one of the opened files. The two strings are then compared and the float value representing this 
+comparison is stored as long as it is above .5. If a new comparison is made that has a comparison level above the previous highest level 
+the new higher level is stored 
+
+The highest rates found are stored as float values in an array to then be passed to the machine learning functions for processing and testing
+'''
 
 testfinal = []
 for i in range(0,5):
@@ -188,12 +203,10 @@ for i in range(5,10):
         else:
             temp.append(s)
     temp.append(0)#the last five are OMITGOOD
-    trainfinal.append(temp)
-
-    
-print(testfinal)     
-
-print(testfinal) 
+    trainfinal.append(temp)   
+#print the final set of comparison levels in arrays to be used for the ML
+print(testfinal)
+print(trainfinal)
 
 
 
