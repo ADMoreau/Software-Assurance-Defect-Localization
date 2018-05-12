@@ -1,3 +1,6 @@
+'''
+This program was created to extract the processed data from the mVista program to text files so that the information could be easily accessed
+'''
 #importing libraries
 import urllib
 from bs4 import BeautifulSoup
